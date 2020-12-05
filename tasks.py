@@ -8,7 +8,6 @@ import datetime
 
 from invoke import task
 from invoke.main import program
-from invoke.util import cd
 from pelican import main as pelican_main
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
@@ -32,6 +31,7 @@ CONFIG = {
     'port': 8000,
 }
 
+
 @task
 def clean(c):
     """Remove generated files"""
@@ -39,20 +39,24 @@ def clean(c):
         shutil.rmtree(CONFIG['deploy_path'])
         os.makedirs(CONFIG['deploy_path'])
 
+
 @task
 def build(c):
     """Build local version of site"""
     pelican_run('-s {settings_base}'.format(**CONFIG))
+
 
 @task
 def rebuild(c):
     """`build` with the delete switch"""
     pelican_run('-d -s {settings_base}'.format(**CONFIG))
 
+
 @task
 def regenerate(c):
     """Automatically regenerate site upon file modification"""
     pelican_run('-r -s {settings_base}'.format(**CONFIG))
+
 
 @task
 def serve(c):
@@ -69,16 +73,19 @@ def serve(c):
     sys.stderr.write('Serving at {host}:{port} ...\n'.format(**CONFIG))
     server.serve_forever()
 
+
 @task
 def reserve(c):
     """`build`, then `serve`"""
     build(c)
     serve(c)
 
+
 @task
 def preview(c):
     """Build production version of site"""
     pelican_run('-s {settings_publish}'.format(**CONFIG))
+
 
 @task
 def livereload(c):
@@ -115,6 +122,7 @@ def publish(c):
             CONFIG['deploy_path'].rstrip('/') + '/',
             **CONFIG))
 
+
 @task
 def gh_pages(c):
     """Publish to GitHub Pages"""
@@ -122,6 +130,7 @@ def gh_pages(c):
     c.run('ghp-import -b {github_pages_branch} '
           '-m {commit_message} '
           '{deploy_path} -p'.format(**CONFIG))
+
 
 def pelican_run(cmd):
     cmd += ' ' + program.core.remainder  # allows to pass-through args to pelican
