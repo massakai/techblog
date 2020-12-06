@@ -3,7 +3,7 @@
 
 AUTHOR = '酒井 将司'
 SITENAME = '笹島技研ブログ'
-SITEURL = 'https://massakai.github.io/techblog'
+SITEURL = ''
 
 PATH = 'content'
 
