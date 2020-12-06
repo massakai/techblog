@@ -3,7 +3,7 @@
 
 AUTHOR = '酒井 将司'
 SITENAME = '笹島技研ブログ'
-SITEURL = 'https://massakai.github.io/techblog'
+SITEURL = ''
 
 PATH = 'content'
 
@@ -33,6 +33,3 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
-
-# Theme
-THEME = "theme"
