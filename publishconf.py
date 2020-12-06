@@ -14,6 +14,8 @@ from pelicanconf import *
 SITEURL = 'https://massakai.github.io/techblog'
 RELATIVE_URLS = False
 
+PATH = os.path.join(os.environ.get('GITHUB_WORKSPACE', os.curdir), 'content')
+
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
