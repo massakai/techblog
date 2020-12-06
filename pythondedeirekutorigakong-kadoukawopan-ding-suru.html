@@ -3,22 +3,28 @@
 <head>
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
-        <title>笹島技研ブログ</title>
+        <title>Pythonでディレクトリが空かどうかを判定する</title>
         <link rel="stylesheet" href="https://massakai.github.io/techblog/theme/css/main.css" />
         <link href="https://massakai.github.io/techblog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="笹島技研ブログ Atom Feed" />
+        <meta name="description" content="Pythonでディレクトリが空かどうかを判定する 直接判定する関数はないので、os.listdir() を使う。 import os def is_empty(dir_path): return len(os.listdir(dir_path)) == 0" />
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="https://massakai.github.io/techblog/">笹島技研ブログ</a></h1>
                 <nav><ul>
-                    <li><a href="https://massakai.github.io/techblog/category/python.html">Python</a></li>
+                    <li class="active"><a href="https://massakai.github.io/techblog/category/python.html">Python</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://massakai.github.io/techblog/pythondedeirekutorigakong-kadoukawopan-ding-suru.html" rel="bookmark"
+           title="Permalink to Pythonでディレクトリが空かどうかを判定する">Pythonでディレクトリが空かどうかを判定する</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="https://massakai.github.io/techblog/pythondedeirekutorigakong-kadoukawopan-ding-suru.html">Pythonでディレクトリが空かどうかを判定する</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-12-06T22:00:00+09:00">
                 Published: 日 06 12月 2020
@@ -29,15 +35,18 @@
         </address>
 <p>In <a href="https://massakai.github.io/techblog/category/python.html">Python</a>.</p>
 
-</footer><!-- /.post-info --><h1>Pythonでディレクトリが空かどうかを判定する</h1>
+</footer><!-- /.post-info -->      <h1>Pythonでディレクトリが空かどうかを判定する</h1>
 <p>直接判定する関数はないので、<a href="https://docs.python.org/ja/3/library/os.html#os.listdir">os.listdir()</a> を使う。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 
 
 <span class="k">def</span> <span class="nf">is_empty</span><span class="p">(</span><span class="n">dir_path</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dir_path</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>
-</code></pre></div>                </article>
-            </aside><!-- /#featured -->
+</code></pre></div>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
