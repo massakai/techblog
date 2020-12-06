@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+import os
 
 AUTHOR = '酒井 将司'
 SITENAME = '笹島技研ブログ'
 SITEURL = 'https://massakai.github.io/techblog'
 
-PATH = 'content'
+PATH = os.path.join(os.environ.get('GITHUB_WORKSPACE', os.curdir), 'content')
 
 TIMEZONE = 'Asia/Tokyo'
 
