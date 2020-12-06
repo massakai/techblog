@@ -25,7 +25,9 @@ AUTHOR_FEED_RSS = None
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('GitHub', 'https://github.com/massakai'),)
+SOCIAL = (('GitHub', 'https://github.com/massakai'),
+          ('Twitter', 'https://twitter.com/massakai_'),
+          )
 
 DEFAULT_PAGINATION = False
 
